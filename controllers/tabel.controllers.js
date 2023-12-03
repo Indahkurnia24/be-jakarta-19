@@ -13,7 +13,7 @@ module.exports = {
 
     addtabel: async (req, res)=>{
        const dataTabel = req.body
-    //    return res.json(dataTabel)
+       return res.json(dataTabel)
        const pesanTabel = new Tabel(dataTabel)
        pesanTabel.save()
        res.json({
