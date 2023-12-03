@@ -13,11 +13,12 @@ module.exports = {
 
     addtabel: async (req, res)=>{
        const dataTabel = req.body
-       return res.json(dataTabel)
+       
        const pesanTabel = new Tabel(dataTabel)
        pesanTabel.save()
        res.json({
-        status: "success add data"
+        status: "success add data",
+        data: dataTabel
        })
         
 
